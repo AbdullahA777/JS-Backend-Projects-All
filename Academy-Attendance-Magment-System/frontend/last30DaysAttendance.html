@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Records</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/navbar.css">
+
+  <style>
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background: #1e1e1e;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+    }
+
+    .record {
+      border: 1px solid #333;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+      background: #2c2c2c;
+      text-align: center;
+    }
+
+    .record p {
+      margin: 5px 0;
+      font-size: large;
+    }
+
+    .students-list {
+      margin-top: 10px;
+    }
+
+    .student {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 0;
+      border-bottom: 1px solid #444;
+    }
+
+    .student:last-child {
+      border-bottom: none;
+    }
+
+    .student .status {
+      font-size: 1.2em;
+    }
+
+    .status .fa-check {
+      color: #4caf50;
+    }
+
+    .status .fa-times {
+      color: #f44336;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="adminDash.html">Admin Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="adminDash.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signUp.html">Add Instructor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="allIns.html">All Instrutors</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="attendance.html">Today's Attendance</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="last30DaysAttendance.html">Last Month Attendance</a>
+        </li>
+        <li class="nav-item">
+          <img src="https://via.placeholder.com/30" class="avatar" alt="User Avatar">
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Last Month Attendance Records </h1>
+    <div id="attendanceList"></div>
+  </div>
+
+  <script src="JS/last30DaysAttendance.js"></script>
+</body>
+
+</html>

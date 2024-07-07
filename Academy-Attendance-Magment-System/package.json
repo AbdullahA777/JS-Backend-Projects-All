@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "git": "^0.1.5",
+    "nothing": "^0.1.0"
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Students</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+
+    <style>
+        body {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .card {
+            background-color: #23272b;
+            border: none;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group input {
+            background-color: #343a40;
+            border: none;
+            color: #ffffff;
+        }
+
+        .form-group input::placeholder {
+            color: #bfbfbf;
+        }
+
+        .form-group button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #ffffff;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .list-group-item {
+            display: flex;
+            align-items: center;
+            background-color: #343a40;
+            color: #ffffff;
+            border: 1px solid #454d55;
+            justify-content: space-between;
+        }
+
+        .list-group-item .checkbox {
+            margin-right: 10px;
+        }
+
+        .list-group-item button {
+            background-color: #dc3545;
+            border: none;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .list-group-item button:hover {
+            background-color: #c82333;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background-color: #007bff;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-submit:hover {
+            background-color: #5b41ee;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Add Students</h2>
+        <div class="card shadow">
+            <div class="card-body">
+                <div class="form-group">
+                    <input type="text" id="studentName" class="form-control" placeholder="Enter student name">
+                    <button class="btn btn-primary" onclick="addStudent()">Add</button>
+                </div>
+                <ul class="list-group mt-3" id="studentList"></ul>
+            </div>
+        </div>
+        <button class="btn btn-submit" onclick="submitAttendance()">Submit Attendance</button>
+    </div>
+
+
+    <script src="JS/userDash.js"></script>
+</body>
+
+</html>

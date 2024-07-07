@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard Navbar</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <style>
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            position: relative;
+        }
+        h1 span {
+            display: inline-block;
+            color: #007bff;
+        }
+        .cursor {
+            display: inline-block;
+            background-color: #007bff;
+            width: 3px;
+            animation: blink 0.7s infinite;
+            position: absolute;
+            right: -5px;
+        }
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1;
+            }
+            51%, 100% {
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="adminDash.html">Admin Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="adminDash.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signUp.html">Add Instructor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="allIns.html">All Instrutors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="attendance.html">Today's Attendance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="last30DaysAttendance.html">Last Month Attendance</a>
+                </li>
+                <li class="nav-item">
+                    <img src="https://via.placeholder.com/30" class="avatar" alt="User Avatar">
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h1 class="text-center mt-5 text-light">WelCome To <span id="animated-text"></span></h1>
+    </main>
+
+    <script>
+        const textElement = document.getElementById('animated-text');
+        const text = 'Gennius Academy';
+        let index = 0;
+        
+        function typeWriter() {
+            if (index < text.length) {
+                textElement.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100);
+            } else {
+                setTimeout(clearText, 1000);
+            }
+        }
+        
+        function clearText() {
+            if (index > 0) {
+                textElement.innerHTML = textElement.innerHTML.slice(0, -1);
+                index--;
+                setTimeout(clearText, 50);
+            } else {
+                setTimeout(typeWriter, 500);
+            }
+        }
+
+        typeWriter();
+
+    </script>
+</body>
+</html>
